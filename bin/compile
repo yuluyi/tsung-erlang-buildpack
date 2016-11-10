@@ -92,7 +92,7 @@ DEFAULT_TSUNG_VERSION="1.6.0"
 if [ -f ${build}/.preferred_tsung_version ]; then
     TSUNG_VERSION=$(cat ${build}/.preferred_tsung_version)
 fi
-TSUNG_VER=${OTP_VERSION:=${DEFAULT_OTP_VERSION}}
+TSUNG_VER=${TSUNG_VERSION:=${DEFAULT_TSUNG_VERSION}}
 TSUNG_TARBALL=tsung-${ver}.tgr.gz
 TSUNG_TARBALL_URL="http://tsung.erlang-projects.org/dist/${TSUNG_TARBALL}"
 
