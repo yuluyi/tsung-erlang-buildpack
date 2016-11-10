@@ -93,7 +93,7 @@ if [ -f ${build}/.preferred_tsung_version ]; then
     TSUNG_VERSION=$(cat ${build}/.preferred_tsung_version)
 fi
 TSUNG_VER=${TSUNG_VERSION:=${DEFAULT_TSUNG_VERSION}}
-TSUNG_TARBALL=tsung-${ver}.tgr.gz
+TSUNG_TARBALL=tsung-${TSUNG_VER}.tgr.gz
 TSUNG_TARBALL_URL="http://tsung.erlang-projects.org/dist/${TSUNG_TARBALL}"
 
 curl -sO TSUNG_TARBALL_URL || exit 1
