@@ -107,7 +107,7 @@ curl -sO ${TSUNG_TARBALL_URL} || exit 1
 ls
 echo ${TSUNG_TARBALL}
 
-tar zxf ${TSUNG_TARBALL} -C ${TSUNG_ROOT} --strip-components=2
+tar zxf ${TSUNG_TARBALL} -C ${TSUNG_ROOT} --strip-components=1
 
 cd ${TSUNG_ROOT}
 
