@@ -102,7 +102,7 @@ TSUNG_TARBALL_URL="http://tsung.erlang-projects.org/dist/${TSUNG_TARBALL}"
 echo ${TSUNG_TARBALL_URL}
 
 curl -sO ${TSUNG_TARBALL_URL} || exit 1
-tar zxf ${cache}/${tarball} -C ${TSUNG_ROOT} --strip-components=2
+tar zxf ${cache}/${TSUNG_TARBALL} -C ${TSUNG_ROOT} --strip-components=2
 
 cd ${TSUNG_ROOT}
 
