@@ -82,6 +82,7 @@ function indent() {
 
 
 TSUNG_ROOT=$build/tsung
+mkdir TSUNG_ROOT
 
 # Download tsung
 
