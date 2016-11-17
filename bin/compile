@@ -130,6 +130,9 @@ echo "-----> Installing with make install"
 
 make install 2>&1 | indent
 
+echo "ls TSUNG_ROOT"
+ls
+
 ln -s ${TSUNG_ROOT} /app/tsung
 
 PATH=/app/tsung/bin:$PATH
