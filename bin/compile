@@ -130,3 +130,5 @@ make install 2>&1 | indent
 ln -s ${TSUNG_ROOT} /app/tsung
 
 PATH=/app/tsung/bin:$PATH
+
+export PATH
