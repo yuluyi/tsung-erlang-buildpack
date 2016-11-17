@@ -132,3 +132,5 @@ ln -s ${TSUNG_ROOT} /app/tsung
 PATH=/app/tsung/bin:$PATH
 
 export PATH
+
+ls /app/tsung/bin
