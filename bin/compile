@@ -84,9 +84,6 @@ function indent() {
 TSUNG_ROOT=$build/tsung
 mkdir ${TSUNG_ROOT}
 
-echo ${TSUNG_ROOT}
-ls ${TSUNG_ROOT}
-
 # Download tsung
 
 echo "-----> Downloading Tsung"
@@ -99,22 +96,25 @@ fi
 TSUNG_VER=${TSUNG_VERSION:=${DEFAULT_TSUNG_VERSION}}
 TSUNG_TARBALL=tsung-${TSUNG_VER}.tar.gz
 
+
+echo "-----> Tsung Version"
 echo ${TSUNG_VER}
 
 TSUNG_TARBALL_URL="http://tsung.erlang-projects.org/dist/${TSUNG_TARBALL}"
 
+echo "-----> Tsung Tarball URL"
 echo ${TSUNG_TARBALL_URL}
 
 curl -sO ${TSUNG_TARBALL_URL} || exit 1
-
-ls
-echo ${TSUNG_TARBALL}
 
 echo ${TSUNG_ROOT}
 
 tar zxf ${TSUNG_TARBALL} -C ${TSUNG_ROOT} --strip-components=1
 
 cd ${TSUNG_ROOT}
+
+echo "ls TSUNG_ROOT"
+ls
 
 # configure
 if [ -f configure ]; then
