@@ -119,7 +119,7 @@ ls
 # configure
 if [ -f configure ]; then
   echo "-----> Configuring"
-  ./configure --prefix=${TSUNG_ROOT} 2>&1 | indent
+  ./configure 2>&1 | indent
 fi
 
 # make
@@ -130,13 +130,13 @@ echo "-----> Installing with make install"
 
 make install 2>&1 | indent
 
-echo "ls TSUNG_ROOT"
-ls
-
-ln -s ${TSUNG_ROOT} /app/tsung
-
-PATH=/app/tsung:$PATH
-
-export PATH
-
-ls /app/tsung/bin
+# echo "ls TSUNG_ROOT"
+# ls
+#
+# ln -s ${TSUNG_ROOT} /app/tsung
+#
+# PATH=/app/tsung:$PATH
+#
+# export PATH
+#
+# ls /app/tsung/bin
