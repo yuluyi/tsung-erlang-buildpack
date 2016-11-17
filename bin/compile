@@ -130,10 +130,9 @@ echo "-----> Installing with make install"
 
 make install 2>&1 | indent
 
-export PATH=/app/otp/bin:$PATH
 echo $PATH
 
-ls /app/opt/bin
+ls /app/otp/bin
 # echo "ls TSUNG_ROOT"
 # ls
 #
