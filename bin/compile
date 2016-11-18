@@ -107,14 +107,9 @@ echo ${TSUNG_TARBALL_URL}
 
 curl -sO ${TSUNG_TARBALL_URL} || exit 1
 
-echo ${TSUNG_ROOT}
-
 tar zxf ${TSUNG_TARBALL} -C ${TSUNG_ROOT} --strip-components=1
 
 cd ${TSUNG_ROOT}
-
-echo "ls TSUNG_ROOT"
-ls
 
 # configure
 if [ -f configure ]; then
@@ -130,16 +125,4 @@ echo "-----> Installing with make install"
 
 make install 2>&1 | indent
 
-echo $PATH
-
-ls /app/otp/bin
-# echo "ls TSUNG_ROOT"
-# ls
-#
-# ln -s ${TSUNG_ROOT} /app/tsung
-#
-# PATH=/app/tsung:$PATH
-#
-# export PATH
-#
-# ls /app/tsung/bin
+echo "-----> Tsung installed"
